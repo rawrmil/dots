@@ -8,9 +8,8 @@ nohup bash ~/dots/scripts/sync.sh > ~/.dots_sync.log 2>&1 &
 
 # Aliases
 alias ls="ls --color=auto"
-alias td="cd ~/tdots"
-alias tds="~/tdots/sync.sh"
-alias notes="~/tdots/sync.sh"
+alias ch="~/dots/scripts/dots/cht.sh"
+alias nt="cd ~/dots/notes"
 
 # Enable colors and change prompt:
 autoload -U colors && colors
