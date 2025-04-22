@@ -16,8 +16,8 @@ if [ `echo $PREFIX | grep -o "com.termux"` ]; then
 	zsh_chsh_path="zsh"
 	rm ~/.termux/termux.properties
 	rm ~/.termux/colors.properties
-	cp $DOTS/conf/termux/termux.properties $HOME/.termux/termux.properties
-	cp $DOTS/conf/termux/termux.properties $HOME/.termux/colors.properties
+	ln -s $DOTS_DIR/conf/termux/termux.properties $HOME/.termux/termux.properties
+	ln -s $DOTS_DIR/conf/termux/colors.properties $HOME/.termux/colors.properties
 fi
 
 # U T I L S
