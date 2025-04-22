@@ -1,4 +1,5 @@
 #!/bin/bash
+cd ~/dots
 echo "RUMYHUMY-DOTS-SYNC-START"
 git pull --rebase
 git add .
