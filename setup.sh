@@ -14,6 +14,10 @@ zsh_chsh_path="/bin/zsh"
 if [ `echo $PREFIX | grep -o "com.termux"` ]; then
 	rootfs="$TERMUX__ROOTFS"
 	zsh_chsh_path="zsh"
+	[ -f ~/.termux/termux.properties ] && rm ~/.termux/termux.properties
+	[ -f ~/.termux/colors.properties ] && rm ~/.termux/colors.properties
+	ln -s $DOTS/conf/termux/termux.properties $HOME/.termux/termux.properties
+	ln -s $DOTS/conf/termux/termux.properties $HOME/.termux/colors.properties
 fi
 
 # U T I L S
