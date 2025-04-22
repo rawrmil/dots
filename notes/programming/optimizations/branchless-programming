@@ -1,0 +1,5 @@
+
+Video about branchless programming:
+https://youtu.be/bVJ-mWWL7cE?si=ux59d7NX5lXichbo
+
+The idea is to write your code and check if assembly doesn't have any jumps in it's code so proccessor could optimize by doing work ahead. This technique is heavily used in shaders
