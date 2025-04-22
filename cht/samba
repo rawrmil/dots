@@ -1,0 +1,22 @@
+# Server (rhres):
+
+sudo smbpasswd -a $USER
+sudo nvim /etc/samba/smb.conf
+
+```
+[rhres]
+path = /home/$USER/rhres
+valid users = $USER
+read only = no
+browseable = yes
+```
+
+sudo systemctl restart smbd
+
+# Client (rhwebsite):
+
+sudo apt update && sudo apt install cifs-utils
+mkdir ~/rhwebsite/res
+sudo mount -t cifs //server_ip/rhres ~/rhwebsite/res -o username=$USER,password=$SAMBA_PASSWORD,uid=$USER_ID,gid=$GROUP_ID
+
+Auto-mount on boot: Add the mount command (without sudo) to /etc/fstab. Store credentials securely using credentials=/path/to/credentials_file in fstab. Create a file with username=YOUR_USERNAME and password=YOUR_SAMBA_PASSWORD. Restrict permissions with chmod 600.
