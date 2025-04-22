@@ -1,6 +1,6 @@
 # Rami's take on Luke's config for ZSH
 
-export PATH="$HOME/dots/scripts/git:$PATH"
+export PATH="$HOME/dots/scripts/dots:$HOME/dots/scripts/git:$PATH"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
@@ -8,9 +8,9 @@ nohup bash ~/dots/scripts/sync.sh > ~/.dots_sync.log 2>&1 &
 
 # Aliases
 alias ls="ls --color=auto"
-alias cht="~/dots/scripts/cht.sh"
 alias td="cd ~/tdots"
 alias tds="~/tdots/sync.sh"
+alias notes="~/tdots/sync.sh"
 
 # Enable colors and change prompt:
 autoload -U colors && colors
