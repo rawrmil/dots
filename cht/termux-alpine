@@ -1,3 +1,3 @@
 proot-distro install alpine
-proot-distro login alpine --isolated
+proot-distro login alpine --isolated --shared-tmp
 
