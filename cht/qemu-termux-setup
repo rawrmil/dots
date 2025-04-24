@@ -62,3 +62,17 @@ qemu-system-aarch64 \
 	-netdev user,id=mynet0 -device virtio-net-pci,netdev=mynet0 \
 	-nographic \
 	-vnc :1
+
+#5
+
+qemu-system-aarch64 \
+  -M virt \
+  -m 1024 \
+  -cpu cortex-a57 \
+  -kernel /data/data/com.termux/files/usr/share/qemu/edk2-arm64/edk2-aarch64-code.fd \
+  -append "root=/dev/vda rw console=ttyAMA0" \
+  -drive file=alpine-virt-3.21.3-aarch64.iso,media=cdrom,readonly=on \
+  -drive file=alpine.img,if=virtio \
+  -netdev user,id=net0 -device virtio-net-pci,netdev=net0 \
+  -nographic \
+  -vnc :1
