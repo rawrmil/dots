@@ -4,10 +4,10 @@ qemu-img create -f qcow2 alpine.img 10G
 
 # I N S T A L L
 qemu-system-aarch64 -M virt -m 1024 -cpu cortex-a57 \
-  -drive if=pflash,format=raw,file=$PREFIX/share/qemu/edk2-aarch64-code.fd,readonly=on \
-  -cdrom alpine-virt-3.21.3-aarch64.iso \
+  -cdrom alpine-standard-3.21.3-aarch64.iso \
   -drive file=alpine.img,format=qcow2 \
   -netdev user,id=n1 -device virtio-net,netdev=n1 \
+  -boot d \
   -vnc :0
 
 # R U N
