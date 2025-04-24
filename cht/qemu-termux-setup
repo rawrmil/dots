@@ -57,7 +57,7 @@ qemu-system-aarch64 \
 	-m 512M \
 	-cpu cortex-a57 \
 	-kernel boot/vmlinuz-lts \
-	-initrd alpine-minirootfs-*.gz \
+	-initrd alpine-minirootfs-3.21.3-aarch64.tar.gz \
 	-append "root=/dev/ram0 console=ttyAMA0" \
 	-netdev user,id=mynet0 -device virtio-net-pci,netdev=mynet0 \
 	-nographic \
