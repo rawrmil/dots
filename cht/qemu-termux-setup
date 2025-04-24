@@ -3,20 +3,19 @@ qemu-img create -f qcow2 alpine.img 10G
 #qemu-img resize alpine.img +5G
 
 # I N S T A L L
-$ qemu-system-aarch64 \
+qemu-system-aarch64 \
 	-machine virt \
 	-m 1024 \
 	-smp cpus=2 \
 	-cpu cortex-a57 \
 	-drive if=pflash,format=raw,read-only=on,file=$PREFIX/share/qemu/edk2-aarch64-code.fd \
 	-drive file=alpine.img,format=qcow2,if=virtio \
-	-netdev user,id=n1,hostfwd=tcp::2222-:22 \
-	-device virtio-net,netdev=n1 \
-	-nographic                           
+	-device virtio-gpu-pci \
 	-cdrom alpine-standard-3.21.3-aarch64.iso \
+	-vnc :0
 
 # R U N
-$ qemu-system-aarch64 \
+qemu-system-aarch64 \
 	-machine virt \
 	-m 1024 \
 	-smp cpus=2 \
