@@ -38,4 +38,5 @@ qemu-system-aarch64 \
 	-drive file=alpine.img,if=virtio \
 	-netdev user,id=mynet \
 	-device virtio-net-pci,netdev=mynet \
+	-device virtio-gpu-pci \
 	-vnc :0
