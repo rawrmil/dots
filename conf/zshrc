@@ -1,6 +1,8 @@
 # Rami's take on Luke's config for ZSH
 
-export PATH="$HOME/dots/scripts/dots:$HOME/dots/scripts/git:$PATH"
+export PATH="$HOME/dots/scripts/dots:$PATH"
+export PATH="$HOME/dots/scripts/git:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
