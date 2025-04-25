@@ -65,6 +65,9 @@ git push -d [REMOTE_NAME] [BRANCH_NAME]
 git checkout [NAME]
 - change branch
 
+git checkout -b NEW_BRANCH OLD_BRANCH
+- clone branch
+
 # I N S P E C T I O N
 
 git diff [BRANCH_A]..[BRANCH_B]
@@ -136,3 +139,12 @@ git rebase [branch]
 
 git reset --hard [commit]
 - clear staging area, rewrite working tree from specified commit
+
+# Versioning
+Tags are immutable pointers to a specific commit, marking a version
+
+git tag -a v1.0.0 -m "Release v1.0.0"
+- create a tag
+git push origin --tags
+- push tags
+Semantic Versioning (SemVer): Use a versioning scheme like SemVer (e.g., MAJOR.MINOR.PATCH) to indicate the type of changes made in each release.
