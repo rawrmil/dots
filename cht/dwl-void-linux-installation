@@ -3,7 +3,7 @@ git checkout v0.7
 
 sudo xbps-install -S \
 	libinput libinput-devel \
-	wayland wayland-devel wlroots wlroots-devel wayland-protocols \
+	wayland wayland-devel wlroots wlroots-devel wayland-protocols wayland-utils wl-clipboard \
 	pkg-config libxcb-devel xcb-util-wm-devel libxkbcommon-devel \
 	seatd
 
