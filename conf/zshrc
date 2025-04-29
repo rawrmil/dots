@@ -6,7 +6,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 # For DWL
-export XDG_RUNTIME_DIR=/run/user/$(id -u)
+export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 
 nohup bash ~/dots/scripts/sync.sh > ~/.dots_sync.log 2>&1 &
 
