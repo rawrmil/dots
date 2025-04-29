@@ -1,0 +1,5 @@
+
+sudo xbps-install -S \
+	libinput libinput-devel \
+	wayland wayland-devel wlroots wlroots-devel wayland-protocols \
+	pkg-config libxcb-devel xcb-util-wm-devel libxkbcommon-devel
