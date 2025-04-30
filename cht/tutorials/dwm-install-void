@@ -1,0 +1,3 @@
+xbps-install xorg-minimal libXinerama-devel 
+vi .xinitrc
+> exec dwm
