@@ -1,3 +1,7 @@
-xbps-install xorg-minimal libXinerama-devel 
+sudo xbps-install -Suy
+sudo xbps-install git
+git clone <dots>
+...
+sudo xbps-install xorg-minimal libXinerama-devel 
 vi .xinitrc
 > exec dwm
