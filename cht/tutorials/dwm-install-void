@@ -1,7 +1,19 @@
+# Install deps
 sudo xbps-install -Suy
-sudo xbps-install git
-git clone <dots>
-...
-sudo xbps-install xorg-minimal libXinerama-devel 
+sudo xbps-install -S xdg-user-dirs xdg-utils
+sudo xbps-install -S git gcc clang make xorg-minimal pkg-config
+sudo xbps-install -S libX11-devel libXft-devel libXinerama-devel freetype-deve 
+sudo xbps-install -S font-firacode
+
+# Clone suckless
+mkdir ~/suckless
+cd ~/suckless
+git clone https://git.suckless.org/dwm
+git clone https://git.suckless.org/st
+git clone https://git.suckless.org/dmenu
+cd dwm; sudo make install clean
+cd st; sudo make install clean
+cd dmenu; sudo make install clean
+
 vi .xinitrc
 > exec dwm
