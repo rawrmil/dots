@@ -1,8 +1,15 @@
+# Tutorial for installation DWM on Void Linux
 # Install dependencies
 sudo xbps-install -Suy
-sudo xbps-install -S xdg-user-dirs xdg-utils
+# Main shi
 sudo xbps-install -S git gcc clang make xorg-minimal pkg-config
+# Desktop shi
+sudo xbps-install -S xdg-user-dirs xdg-utils
+# For building the 
 sudo xbps-install -S libX11-devel libXft-devel libXinerama-devel freetype-deve 
+# For display/keyboard settings
+sudo xbps-install -S xrandr xrdb setxkbmap
+# Cool font
 sudo xbps-install -S font-firacode
 
 # Dualboot
