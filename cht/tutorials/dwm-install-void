@@ -17,9 +17,12 @@ cd ~/suckless
 git clone https://git.suckless.org/dwm
 git clone https://git.suckless.org/st
 git clone https://git.suckless.org/dmenu
+
+# Build suckless
 cd dwm; sudo make install clean
 cd st; sudo make install clean
 cd dmenu; sudo make install clean
+
 
 vi .xinitrc
 > exec dwm
