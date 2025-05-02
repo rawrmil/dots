@@ -12,7 +12,7 @@ sudo xbps-install -S xrandr xrdb setxkbmap
 # Cool font
 sudo xbps-install -S font-firacode
 # For development and other stuff
-sudo xbps-install -S mesa libva-glx libva-glx-devel qt5-opengl
+sudo xbps-install -S mesa-dri
 
 # Dualboot
 sudo vi /etc/default/grub
