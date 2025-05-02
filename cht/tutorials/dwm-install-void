@@ -6,7 +6,10 @@ sudo xbps-install -S libX11-devel libXft-devel libXinerama-devel freetype-deve
 sudo xbps-install -S font-firacode
 
 # Dualboot
-sudo vi /etc/grub/grub
+sudo vi /etc/default/grub
+> GRUB_TIMEOUT=1
+> GRUB_DISABLE_OS_PROBER=false
+sudo grub-mkconfig --output=/boot/grub/grub.cfg
 
 # Clone suckless
 mkdir ~/suckless
