@@ -30,3 +30,9 @@ cd $HOME/suckless/dmenu
 sudo make install clean
 cd $HOME/suckless/st
 sudo make install clean
+
+echo "[desktop.sh] Symlink the .xinitrc & .Xresources..."
+rm $HOME/.xinitrc
+ln -s $HOME/dots/conf/desktop/xinitrc $HOME/.xinitrc
+rm $HOME/.Xresources
+ln -s $HOME/dots/conf/desktop/xinitrc $HOME/.Xresources
