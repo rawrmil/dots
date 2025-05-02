@@ -25,7 +25,10 @@ cd dmenu; sudo make install clean
 
 # Audio setup
 #sudo xbps-install -S pulseaudio
-sudo xbps-install alsa-firmware linux-firmware
+sudo xbps-install -S alsa-firmware linux-firmware
+
+# All things I need
+sudo xbps-install -S telegram-desktop
 
 vi .xinitrc
 > exec dwm
