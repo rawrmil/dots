@@ -15,12 +15,12 @@ echo "[desktop.sh] Clone the suckless..."
 
 echo "[desktop.sh] Symlink the config.def.h..."
 if [ ! -L ./dwm/config.def.h ]; then
-	rm ./dwm/config.h
-	ln -s $HOME/dots/conf/desktop/dwm/config.def.h ./dwm/config.h
+	[ -f ./dwm/config.h ] && rm ./dwm/config.h
+	ln -s $HOME/dots/conf/desktop/dwm/config.h $HOME/suckless/dwm/config.h
 fi
 if [ ! -L ./st/config.def.h ]; then
-	rm ./st/config.h
-	ln -s $HOME/dots/conf/desktop/st/config.def.h ./st/config.h
+	[ -f ./st/config.h ] && rm ./st/config.h
+	ln -s $HOME/dots/conf/desktop/st/config.h $HOME/suckless/st/config.h
 fi
 
 echo "[desktop.sh] Make the suckless..."
