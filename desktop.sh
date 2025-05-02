@@ -4,25 +4,26 @@
 set -e
 set -x
 
-# Go to suckless
+echo "[desktop.sh] cd to ~/suckless..."
 mkdir -p $HOME/suckless
 cd $HOME/suckless
 
-# Clone
+echo "[desktop.sh] Clone the suckless..."
 [ ! -d ./dwm ] && git clone https://git.suckless.org/dwm
 [ ! -d ./dmenu ] && git clone https://git.suckless.org/dmenu
 [ ! -d ./st ] && git clone https://git.suckless.org/st
 
-# Substitute configs
-if [ ! -L dwm/config.h ]; then
-	rm dwm/config.h
-	ln -s $HOME/dots/conf/desktop/dwm/config.h $HOME/desktop/dwm/config.h
+echo "[desktop.sh] Symlink the config.def.h..."
+if [ ! -L ./dwm/config.def.h ]; then
+	rm ./dwm/config.def.h
+	ln -s $HOME/dots/conf/desktop/dwm/config.def.h ./dwm/config.def.h
 fi
-if [ ! -L st/config.h ]; then
-	rm st/config.h
-	ln -s $HOME/dots/conf/desktop/st/config.h $HOME/desktop/st/config.h
+if [ ! -L ./st/config.def.h ]; then
+	rm ./st/config.def.h
+	ln -s $HOME/dots/conf/desktop/st/config.def.h ./st/config.def.h
 fi
 
+echo "[desktop.sh] Make the suckless..."
 cd $HOME/suckless/dwm
 sudo make install clean
 cd $HOME/suckless/dmenu
