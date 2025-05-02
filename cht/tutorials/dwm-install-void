@@ -1,9 +1,12 @@
-# Install deps
+# Install dependencies
 sudo xbps-install -Suy
 sudo xbps-install -S xdg-user-dirs xdg-utils
 sudo xbps-install -S git gcc clang make xorg-minimal pkg-config
 sudo xbps-install -S libX11-devel libXft-devel libXinerama-devel freetype-deve 
 sudo xbps-install -S font-firacode
+
+# Dualboot
+sudo vi /etc/grub/grub
 
 # Clone suckless
 mkdir ~/suckless
