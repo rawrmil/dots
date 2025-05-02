@@ -11,6 +11,8 @@ sudo xbps-install -S libX11-devel libXft-devel libXinerama-devel freetype-deve
 sudo xbps-install -S xrandr xrdb setxkbmap
 # Cool font
 sudo xbps-install -S font-firacode
+# For development and other stuff
+sudo xbps-install -S mesa libva-glx libva-glx-devel qt5-opengl
 
 # Dualboot
 sudo vi /etc/default/grub
