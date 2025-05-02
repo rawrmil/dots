@@ -23,6 +23,9 @@ cd dwm; sudo make install clean
 cd st; sudo make install clean
 cd dmenu; sudo make install clean
 
+# Audio setup
+#sudo xbps-install -S pulseaudio
+sudo xbps-install -S pipewire
 
 vi .xinitrc
 > exec dwm
