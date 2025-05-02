@@ -26,7 +26,6 @@ cd dmenu; sudo make install clean
 # Audio setup
 #sudo xbps-install -S pulseaudio
 sudo xbps-install alsa-firmware linux-firmware
-sudo xbps-install -S pipewire
 
 vi .xinitrc
 > exec dwm
