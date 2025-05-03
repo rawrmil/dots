@@ -1,6 +1,7 @@
 # Rami's take on Luke's config for ZSH
 export PATH="$HOME/dots/scripts/termux:$PATH"
 export PATH="$HOME/dots/scripts/git:$PATH"
+export PATH="$HOME/dots/scripts/desktop:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
@@ -72,3 +73,4 @@ bindkey '^e' edit-command-line
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+echo "YEAH"
