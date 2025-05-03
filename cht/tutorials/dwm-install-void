@@ -36,6 +36,9 @@ cd dmenu; sudo make install clean
 #sudo xbps-install -S pulseaudio
 sudo xbps-install -S alsa-firmware linux-firmware
 
+# Battery status
+sudo xbps-install acpi
+
 # All things I need
 sudo xbps-install -S telegram-desktop
 
