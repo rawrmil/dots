@@ -1,6 +1,4 @@
 # Rami's take on Luke's config for ZSH
-
-export PATH="$HOME/dots/scripts/dots:$PATH"
 export PATH="$HOME/dots/scripts/termux:$PATH"
 export PATH="$HOME/dots/scripts/git:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -66,7 +64,7 @@ echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 bindkey -s '^z' 'cd ..\n'
-bindkey -s '^t' '^ctmux\n'
+bindkey -s '^t' 'tmux\n'
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
