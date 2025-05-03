@@ -1,5 +1,6 @@
 #!/bin/bash
 
-while [ true ]; do
-	startx
+while true; do
+  dwm
+  echo "dwm exited. Restarting..."
 done
