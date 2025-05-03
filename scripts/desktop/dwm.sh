@@ -1,5 +1,5 @@
 #!/bin/bash
 
 while [ true ]; do
-	startx &
+	startx
 done
