@@ -38,9 +38,11 @@ sudo xbps-install -S alsa-firmware linux-firmware
 
 # Battery status
 sudo xbps-install acpi
+#xsetroot -name "Thanks for all the fish"
 
 # All things I need
 sudo xbps-install -S telegram-desktop
+
 
 vi .xinitrc
 > exec dwm
