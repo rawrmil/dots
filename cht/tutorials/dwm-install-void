@@ -34,7 +34,7 @@ cd dmenu; sudo make install clean
 
 # Audio setup
 #sudo xbps-install -S pulseaudio
-sudo xbps-install -S alsa-firmware linux-firmware
+sudo xbps-install -S alsa-firmware alsa-lib alsa-utils linux-firmware
 
 # Battery status
 sudo xbps-install acpi
