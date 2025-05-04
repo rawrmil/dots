@@ -1,5 +1,2 @@
 #!/bin/bash
-[ -z $DISPLAY ] && export DISPLAY=:0
-xrdb -merge -I$HOME ~/.Xresources
-setxkbmap -layout us,ru -option grp:alt_shift_toggle
 ~/dots/scripts/desktop/dwm-loop.sh
