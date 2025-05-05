@@ -59,7 +59,7 @@ sudo ln -s /etc/sv/pulseaudio /var/service
 sudo xbps-install picom
 
 # Printer
-sudo xbps-install -S cups
+sudo xbps-install -S cups cups-pdf cups-filters
 sudo ln -s /etc/sv/cupsd /var/service
 sudo lpinfo -v
 # go to http://localhost:631/admin
