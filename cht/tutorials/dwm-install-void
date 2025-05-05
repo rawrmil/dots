@@ -61,6 +61,12 @@ sudo xbps-install picom
 # Printer
 sudo xbps-install -S cups
 sudo ln -s /etc/sv/cupsd /var/service
+sudo lpinfo -v
+# - to find <uri>
+sudo xbps-install -S samsung-unified-driver
+# - or some shit
+sudo lpadmin -p SamsungML1640 -E -v "usb://Samsung/ML-1640" -m "/usr/share/ppd/samsung/Samsung-ML-1640.ppd"
+lpoptions -d SamsungML1640
 
 vi .xinitrc
 > exec dwm
