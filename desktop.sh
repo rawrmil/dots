@@ -35,6 +35,5 @@ echo "[desktop.sh] Symlink the .xinitrc & .Xresources..."
 [ -f $HOME/.xinitrc ] && rm $HOME/.xinitrc
 ln -s $HOME/dots/conf/desktop/xinitrc $HOME/.xinitrc
 [ -f $HOME/.Xresources ] && rm $HOME/.Xresources
-sudo echo "Xft.dpi: 180
-Xft.antialias: true" | sudo tee $HOME/.Xresources
-
+sudo echo 'Xft.dpi: 180
+Xft.antialias: true' | sudo tee $HOME/.Xresources
