@@ -62,15 +62,18 @@ sudo xbps-install picom
 sudo xbps-install -S cups
 sudo ln -s /etc/sv/cupsd /var/service
 sudo lpinfo -v
-# - to find <uri>
-# usb://Samsung/ML-1640%20Series?serial=145UBKDZ101586N
-sudo xbps-install -S samsung-unified-driver
-# - or some shit
-sudo usermod -aG lpadmin $USER
-sudo guzip /usr/share/ppd/suld/Samsung_ML-1640_Series.ppd.gz
-sudo chmod a+r /usr/share/ppd/suld/Samsung_ML-1640_Series.ppd
-lpadmin -p SamsungML1640 -E -v "usb://Samsung/ML-1640%20Series?serial=145UBKDZ101586N" -m "/usr/share/ppd/suld/Samsung_ML-1640_Series.ppd.gz"
-lpoptions -d SamsungML1640
+# go to http://localhost:631/admin
+# > Administration > Enter user and password
+# Easy from now on
 
+## - to find <uri>
+## usb://Samsung/ML-1640%20Series?serial=145UBKDZ101586N
+#sudo xbps-install -S samsung-unified-driver
+## - or some shit
+#sudo usermod -aG lpadmin $USER
+#sudo guzip /usr/share/ppd/suld/Samsung_ML-1640_Series.ppd.gz
+#sudo chmod a+r /usr/share/ppd/suld/Samsung_ML-1640_Series.ppd
+#lpadmin -p SamsungML1640 -E -v "usb://Samsung/ML-1640%20Series?serial=145UBKDZ101586N" -m "Samsung_ML-1640_Series.ppd"
+#lpoptions -d SamsungML1640
 vi .xinitrc
 > exec dwm
