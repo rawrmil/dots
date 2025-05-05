@@ -55,5 +55,8 @@ exec /usr/bin/pulseaudio --start' \
 sudo chmod +x /etc/sv/pulseaudio/run
 sudo ln -s /etc/sv/pulseaudio /var/service
 
+# Picom (deps: mesa mesa-dri and i don't even know at that point)
+sudo xbps-install picom
+
 vi .xinitrc
 > exec dwm
