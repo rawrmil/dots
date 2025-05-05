@@ -8,7 +8,7 @@ sudo xbps-install -S xdg-user-dirs xdg-utils
 # For building the 
 sudo xbps-install -S libX11-devel libXft-devel libXinerama-devel freetype-deve 
 # For display/keyboard settings
-sudo xbps-install -S xrandr xrdb setxkbmap
+sudo xbps-install -S xrandr xrdb setxkbmap xsetroot xclip
 # Cool font
 sudo xbps-install -S font-firacode
 # For development and other stuff
