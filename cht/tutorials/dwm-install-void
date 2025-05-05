@@ -58,5 +58,9 @@ sudo ln -s /etc/sv/pulseaudio /var/service
 # Picom (deps: mesa mesa-dri and i don't even know at that point)
 sudo xbps-install picom
 
+# Printer
+sudo xbps-install -S cups
+sudo ln -s /etc/sv/cupsd /var/service
+
 vi .xinitrc
 > exec dwm
