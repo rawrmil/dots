@@ -5,6 +5,7 @@ xrdb -merge ~/.Xresources
 setxkbmap -layout us,ru -option grp:alt_shift_toggle
 bash ~/dots/scripts/desktop/dwm-statusbar.sh &
 while true; do
+	echo "$XDG_RUNTIME_DIR"
 	sleep 1
 	dwm
 done
