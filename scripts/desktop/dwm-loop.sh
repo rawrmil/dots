@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 [ -z "$DISPLAY" ] && export DISPLAY=:0
-[ -z "$XDG_RUNTIME_DIR" ] && export XDG_RUNTIME_DIR=/run/user/$(id -u)
+[ -z "$XDG_RUNTIME_DIR" ] && export XDG_RUNTIME_DIR=/tmp
 bash ~/dots/scripts/desktop/dwm-statusbar.sh &
 while true; do
 	xrdb -merge ~/.Xresources
