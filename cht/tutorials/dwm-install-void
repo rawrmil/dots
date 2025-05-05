@@ -49,9 +49,9 @@ sudo chmod 0700 /run/user/$(id -u)
 
 # PulseAudio
 sudo mkdir -p /etc/sv/pulseaudio
-sudo echo "#!/bin/sh
-exec /usr/bin/pulseaudio --start" \
-> sudo tee /etc/sv/pulseaudio/run
+echo '#!/bin/sh
+exec /usr/bin/pulseaudio --start' \
+| sudo tee /etc/sv/pulseaudio/run
 sudo chmod +x /etc/sv/pulseaudio/run
 sudo ln -s /etc/sv/pulseaudio /var/service
 
