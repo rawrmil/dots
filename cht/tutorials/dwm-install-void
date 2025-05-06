@@ -75,5 +75,9 @@ sudo lpinfo -v
 #sudo chmod a+r /usr/share/ppd/suld/Samsung_ML-1640_Series.ppd
 #lpadmin -p SamsungML1640 -E -v "usb://Samsung/ML-1640%20Series?serial=145UBKDZ101586N" -m "Samsung_ML-1640_Series.ppd"
 #lpoptions -d SamsungML1640
-vi .xinitrc
-> exec dwm
+
+# SSHD
+#iptables -P INPUT ACCEPT
+#iptables -P OUTPUT ACCEPT
+#iptables -F
+
