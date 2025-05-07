@@ -2,10 +2,11 @@
 while true; do
 	LINE=""
 	# Weather
-	curl wttr.in/moscow/?format="%t, %p, %w"
+	#WEATHER=$(curl "https://wttr.in/?format=%t,%p,%w")
+	#LINE="$LINE | $WEATHER"
 	# Battery
 	BAT=$(acpi -b | grep -oP '[0-9]+(?=%)' | awk '{print "BAT:"$1"%"}' | head -1)
-	[ ! -z $BAT ] && LINE="$LINE$BAT "
+	[ ! -z $BAT ] && LINE="$LINE | $BAT"
 	# Some cool text
 	LINE="$LINE | Help me"
 	# Date+time
