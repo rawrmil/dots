@@ -18,13 +18,11 @@
 #) &
 
 DATETIME="Pending..."
-(
 while true; do
 	DATETIME=$(date '+%Y-%m-%d %H:%M:%S')
 	echo "$DATETIME"
 	sleep 1
-done
-) &
+done &
 
 # M A I N L O O P
 
