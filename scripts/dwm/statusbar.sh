@@ -1,5 +1,6 @@
 #!/bin/bash
-
+exec ~/dots/scripts/dwm/test
+exit 0
 WEATHER="Pending..."
 (
 while true; do
