@@ -21,6 +21,7 @@ DATETIME="Pending..."
 (
 while true; do
 	DATETIME=$(date '+%Y-%m-%d %H:%M:%S')
+	echo "$DATETIME"
 	sleep 1
 done
 ) &
