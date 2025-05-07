@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WEATHER=
+WEATHER="Pending..."
 (
 while true; do
 	WEATHER=$(curl "https://wttr.in/?format=%t,%p,%w")
@@ -8,7 +8,7 @@ while true; do
 done
 ) &
 
-BATTERY=
+BATTERY="Pending..."
 (
 while true; do
 	BATTERY=$(acpi -b | grep -oP '[0-9]+(?=%)' | awk '{print "POWER: "$1"%"}' | head -1)
@@ -17,7 +17,7 @@ while true; do
 done
 ) &
 
-DATETIME=
+DATETIME="Pending..."
 (
 while true; do
 	DATETIME=$(date '+%Y-%m-%d %H:%M:%S')
