@@ -8,12 +8,12 @@ while true; do
 done
 ) &
 
-BATTERYTERY=
+BATTERY=
 (
 while true; do
-	BATTERYTERY=$(acpi -b | grep -oP '[0-9]+(?=%)' | awk '{print "POWER: "$1"%"}' | head -1)
+	BATTERY=$(acpi -b | grep -oP '[0-9]+(?=%)' | awk '{print "POWER: "$1"%"}' | head -1)
 	[ ! -z $BATTERY ] && BATTERY="POWER: INFINITE"
-	sleep 1
+	sleep 10
 done
 ) &
 
