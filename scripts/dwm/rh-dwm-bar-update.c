@@ -65,14 +65,12 @@ int main() {
 
 	Window root = DefaultRootWindow(display);
 	char status_string[1024];
-
 	while (1) {
 		snprintf(status_string, sizeof(status_string), "%s | %s | %s", weather, battery, datetime);
 		XStoreName(display, root, status_string);
 		XFlush(display);
-		usleep(1000);
+		usleep(1000*1000);
 	}
-
 	XCloseDisplay(display);
 	return 0;
 }
