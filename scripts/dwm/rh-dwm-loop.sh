@@ -7,6 +7,6 @@ while true; do
 	exec ~/dots/scripts/dwm/rh-dwm-bar-run.sh &
 	xrdb -merge ~/.Xresources
 	setxkbmap -layout us,ru -option grp:alt_shift_toggle
-	picom -b --config ~/dots/conf/desktop/picom.conf
+	picom -b --config ~/dots/conf/dwm/picom.conf
 	dwm
 done
