@@ -12,6 +12,7 @@ export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 nohup bash ~/dots/scripts/sync.sh > ~/.dots_sync.log 2>&1 &
 
 # Aliases
+alias tmux="TERM=xterm-256color tmux"
 alias ls="ls --color=auto"
 alias ch="~/dots/scripts/dots/cht.sh"
 
