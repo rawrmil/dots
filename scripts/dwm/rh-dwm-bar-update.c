@@ -70,7 +70,7 @@ int main() {
 		snprintf(status_string, sizeof(status_string), "%s | %s | %s", weather, battery, datetime);
 		XStoreName(display, root, status_string);
 		XFlush(display);
-		usleep(500*1000);
+		usleep(1000);
 	}
 
 	XCloseDisplay(display);
