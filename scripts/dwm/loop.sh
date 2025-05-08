@@ -3,7 +3,7 @@ set -x
 [ -z "$DISPLAY" ] && export DISPLAY=:0
 [ -z "$XDG_RUNTIME_DIR" ] && export XDG_RUNTIME_DIR=/tmp
 while true; do
-	pkill -f ~/dots/scripts/dwm/statusbar.sh
+	pkill ~/dots/scripts/dwm/statusbar.sh
 	bash ~/dots/scripts/dwm/statusbar.sh &
 	xrdb -merge ~/.Xresources
 	setxkbmap -layout us,ru -option grp:alt_shift_toggle
