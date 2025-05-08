@@ -4,5 +4,4 @@ set -e
 cd ~/dots/scripts/dwm/
 gcc -pthread -o statusbar statusbar.c -lX11
 pkill -f ~/dots/scripts/dwm/statusbar
-sleep 1
 exec ~/dots/scripts/dwm/statusbar
