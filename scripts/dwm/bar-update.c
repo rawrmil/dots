@@ -67,7 +67,7 @@ int main() {
 	char status_string[1024];
 
 	while (1) {
-		snprintf(status_string, sizeof(status_string), "%s | %s | %s", weather, battery datetime);
+		snprintf(status_string, sizeof(status_string), "%s | %s | %s", weather, battery, datetime);
 		XStoreName(display, root, status_string);
 		XFlush(display);
 		usleep(500*1000);
