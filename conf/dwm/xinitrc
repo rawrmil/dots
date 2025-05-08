@@ -1,2 +1,2 @@
 #!/bin/bash
-exec ~/dots/scripts/dwm/loop.sh -a RH-DWM-LOOP
+exec -a RH_DWM_LOOP ~/dots/scripts/dwm/loop.sh
