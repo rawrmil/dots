@@ -30,3 +30,6 @@ let regs=split('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-
 
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 noremap <F8> :noremap <F9> :w<C-v><Enter>:!<C-v><Enter><Left>
+
+" Colors
+set termguicolors
