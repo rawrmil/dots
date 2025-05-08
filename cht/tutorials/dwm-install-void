@@ -40,12 +40,12 @@ sudo xbps-install -S alsa-firmware alsa-lib alsa-utils linux-firmware
 sudo xbps-install acpi
 #xsetroot -name "Thanks for all the fish"
 
-# All things I need
-sudo xbps-install -S telegram-desktop
+# Screenshoting
 sudo xbps-install -S flameshot
 sudo mkdir /run/user/$(id -u)
 sudo chmod 0700 /run/user/$(id -u)
-sudo /etc/sv/dbus /var/service
+sudo chown rami:rami /run/user/$(id -u)
+sudo xbps-install -S dbus
 # - zooming and screenshoting
 
 # PulseAudio
