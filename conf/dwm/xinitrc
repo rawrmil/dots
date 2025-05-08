@@ -1,2 +1,2 @@
 !/bin/bash
-exec -a RH_DWM_LOOP ~/dots/scripts/dwm/loop.sh
+bash -c "exec -a RH_DWM_LOOP ~/dots/scripts/dwm/loop.sh"
