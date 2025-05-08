@@ -10,9 +10,7 @@ export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 #mkdir -p XDG_RUNTIME_DIR
 
 # Dots synchronisation
-if ! pgrep -x "rh-dots-sync.sh"; then
-	nohup bash ~/dots/scripts/rh-dots-sync.sh > ~/.dots_sync.log 2>&1 & disown
-fi
+nohup bash ~/dots/scripts/rh-dots-sync.sh > ~/.dots_sync.log 2>&1 & disown
 
 # Aliases
 alias tmux="TERM=screen-256color tmux"
