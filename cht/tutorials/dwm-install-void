@@ -88,3 +88,19 @@ Also, read this https://wiki.voidlinux.org/Steam
 #iptables -P OUTPUT ACCEPT
 #iptables -F
 
+# WebDAV (i think rclone is better)
+sudo xbps-install davfs2
+sudo mkdir /mnt/nextcloud
+echo "https://<domain>/remote.php/dav/files/<your_user> /mnt/nextcloud davfs user,rw,noauto,file_cache=.davfs/cache,uid=$(id -u) 0 0" | sudo tee -a /etc/fstab
+# Sequre credentials
+sudo mkdir ~/.davfs
+sudo chown $USER:$USER ~/.davfs
+sudo chmod 700 ~/.davfs
+echo "https://<domain> <username> <password>" > ~/.davfs/secrets
+sudo chmod 600 ~/.davfs/secrets
+sudo ln -s /etc/davfs2 /usr/share/davfs2
+mount /mnt/nextcloud
+
+# rclone
+rclone config
+# - and do what it says
