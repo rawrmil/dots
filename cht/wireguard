@@ -1,0 +1,39 @@
+# WireGuard Server Installation
+
+Debian/Ubuntu:
+
+sudo apt update && sudo apt upgrade -y && sudo apt install wireguard ufw -y
+
+wg genkey | tee privatekey | wg pubkey > publickey
+
+sudo nano /etc/wireguard/wg0.conf
+```
+[Interface]
+PrivateKey = <Server Private Key>
+Address = 10.6.0.1/24
+ListenPort = 51820
+
+[Peer]
+PublicKey = <Client Public Key>
+AllowedIPs = 10.6.0.2/32
+```
+sudo chmod 600 /etc/wireguard/wg0.conf
+
+sudo systemctl enable wg-quick@wg0
+sudo systemctl start wg-quick@wg0
+sudo wg
+
+sudo ufw allow 22, 51820/udp
+sudo ufw enable
+sudo sysctl -w net.ipv4.ip_forward=1
+
+sudo nano /etc/sysctl.conf
+```
+net.ipv4.ip_forward=1
+```
+
+sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+sudo apt install iptables-persistent
+sudo netfilter-persistent save
+
+Replace <Server Private Key> and <Client Public Key> with your actual keys.
