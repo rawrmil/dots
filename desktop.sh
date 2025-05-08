@@ -37,3 +37,5 @@ ln -s $HOME/dots/conf/dwm/xinitrc $HOME/.xinitrc
 [ -f $HOME/.Xresources ] && rm $HOME/.Xresources
 sudo echo 'Xft.dpi: 180
 Xft.antialias: true' | sudo tee $HOME/.Xresources
+
+
