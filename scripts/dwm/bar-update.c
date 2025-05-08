@@ -65,13 +65,9 @@ int main() {
 
 	Window root = DefaultRootWindow(display);
 	char status_string[1024];
-	char coolstr[] = " HELP ME ";
-	int _coolstr = sizeof(coolstr)/sizeof(char)-1;
 
 	while (1) {
-		for (int i = 0; i < _coolstr; i++)
-			coolstr[i] = coolstr[(i+1)%_coolstr];
-		snprintf(status_string, sizeof(status_string), "%s | %s | %s | %s", weather, battery, coolstr, datetime);
+		snprintf(status_string, sizeof(status_string), "%s | %s | %s", weather, battery datetime);
 		XStoreName(display, root, status_string);
 		XFlush(display);
 		usleep(500*1000);

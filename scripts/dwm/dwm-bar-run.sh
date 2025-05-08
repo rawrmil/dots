@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
+set -x
 cd ~/dots/scripts/dwm/
-#pkill -x 'dwm-bar-update'
 gcc -pthread -o dwm-bar-update bar-update.c -lX11
 exec ./dwm-bar-update
