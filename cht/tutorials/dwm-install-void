@@ -114,4 +114,4 @@ exec chpst -u $USER:$USER rclone mount nextcloud: /mnt/nextcloud --vfs-cache-mod
 | sudo tee /etc/sv/rclonemnt/run
 
 sudo chmod +x /etc/sv/rclonemnt/run
-sudo ln -s /etc/sv/rclonemnt /etc/service
+sudo ln -s /etc/sv/rclonemnt /var/service
