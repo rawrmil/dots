@@ -109,8 +109,8 @@ sudo chown $USER:$USER /mnt/nextcloud
 # Add service
 sudo mkdir /etc/sv/rclonemnt
 
-echo '#!/bin/bash
-rclone mount nextcloud: /mnt/nextcloud --vfs-cache-mode writes' \
+echo "#!/bin/bash
+exec chpst -u $USER:$USER rclone mount nextcloud: /mnt/nextcloud --vfs-cache-mode writes" \
 | sudo tee /etc/sv/rclonemnt/run
 
 sudo chmod +x /etc/sv/rclonemnt/run
