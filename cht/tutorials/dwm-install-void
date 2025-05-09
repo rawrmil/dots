@@ -44,7 +44,7 @@ sudo xbps-install acpi
 sudo xbps-install -S flameshot
 sudo mkdir /run/user/$(id -u)
 sudo chmod 0700 /run/user/$(id -u)
-sudo chown rami:rami /run/user/$(id -u)
+sudo chown $USER:$USER /run/user/$(id -u)
 sudo xbps-install -S dbus
 # - zooming and screenshoting
 
