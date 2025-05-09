@@ -121,3 +121,4 @@ sudo xbps-install -S android-udev-rules android-tools
 sudo groupadd plugdev
 sudo usermod -aG plugdev rami
 # relogin!!!
+ls /usr/lib/udev/rules.d/
