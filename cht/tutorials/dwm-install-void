@@ -118,6 +118,6 @@ sudo ln -s /etc/sv/rclonemnt /var/service
 
 # ADB
 sudo xbps-install -S android-udev-rules android-tools
-sudo groupadd plogdev
+sudo groupadd plugdev
 sudo usermod -aG plugdev rami
 # relogin!!!
