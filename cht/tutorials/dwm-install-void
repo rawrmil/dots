@@ -118,9 +118,6 @@ sudo ln -s /etc/sv/rclonemnt /var/service
 
 # ADB
 sudo xbps-install -S android-tools
-sudo groupadd plugdev
-sudo usermod -aG plugdev $USER
-# relogin!!!
 lsusb
 sudo chown rami:rami /dev/bus/usb/xxx/yyy
 # xxx - bus, yyy - device
