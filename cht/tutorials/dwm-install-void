@@ -119,3 +119,5 @@ sudo ln -s /etc/sv/rclonemnt /var/service
 # ADB
 sudo xbps-install -S android-tools
 sudo ln -s /etc/sv/udevd /var/service
+sudo groupadd plogdev
+sudo group -aG plugdev rami
