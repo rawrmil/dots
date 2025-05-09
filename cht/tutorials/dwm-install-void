@@ -105,3 +105,13 @@ mount /mnt/nextcloud
 # rclone
 rclone config
 # - and do what it says
+sudo chown $USER:$USER /mnt/nextcloud
+# Add service
+sudo mkdir /etc/sv/rclonemnt
+
+echo '#!/bin/bash
+rclone mount nextcloud: /mnt/nextcloud --vfs-cache-mode writes' \
+| sudo tee /etc/sv/rclonemnt/run
+
+sudo chmod +x /etc/sv/rclonemnt/run
+sudo ln -s /etc/sv/rclonemnt /etc/service
