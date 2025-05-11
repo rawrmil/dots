@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "monospace:size=12:Noto Color Emoji:size=12";
+static char *font = "monospace:size=12:size=12";
 static int borderpx = 2;
 
 /*
