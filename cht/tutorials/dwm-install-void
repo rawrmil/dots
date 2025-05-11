@@ -125,3 +125,6 @@ lsusb
 sudo chown rami:rami /dev/bus/usb/xxx/yyy
 # xxx - bus, yyy - device
 adb devices
+
+# Restart pulseaudio
+pulseaudio -k && pulseaudio --start
