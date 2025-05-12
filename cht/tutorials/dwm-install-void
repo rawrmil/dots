@@ -128,3 +128,6 @@ adb devices
 
 # Restart pulseaudio
 pulseaudio -k && pulseaudio --start
+
+# OLLAMA
+curl -fsSL https://ollama.com/install.sh | sh
