@@ -134,5 +134,17 @@ curl -fsSL https://ollama.com/install.sh | sh
 
 # VNC
 sudo xbps-install -S x11vnc
-# ON client
-ssh -L 8888:localhost:8888 name.dnydns-server.com
+x11vnc -passwd <passwd>
+
+# Autostartup
+sudo mkdir -p /etc/sv/x11vnc-server
+echo '#!/bin/sh
+while true; do
+	exec /usr/bin/x11vnc -passwd <passwd>
+done' \
+| sudo tee /etc/sv/x11vnc-server/run
+sudo chmod +x /etc/sv/x11vnc-server/run
+sudo ln -s /etc/sv/x11vnc-server /var/service
+
+# On client
+ssh -N -L 5900:localhost:5900 user@xx.xx.xx.xx
