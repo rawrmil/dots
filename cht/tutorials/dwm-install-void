@@ -139,8 +139,9 @@ x11vnc -passwd <passwd>
 # Autostartup
 sudo mkdir -p /etc/sv/x11vnc-server
 echo '#!/bin/sh
+sudo chpst -u rami:rami startx
 while true; do
-	exec /usr/bin/x11vnc -passwd <passwd>
+	sudo chpst -u rami:rami x11vnc -passwd <passwd>
 done' \
 | sudo tee /etc/sv/x11vnc-server/run
 sudo chmod +x /etc/sv/x11vnc-server/run
