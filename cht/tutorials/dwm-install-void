@@ -133,4 +133,6 @@ pulseaudio -k && pulseaudio --start
 curl -fsSL https://ollama.com/install.sh | sh
 
 # VNC
-
+sudo xbps-install -S x11vnc
+# ON client
+ssh -L 8888:localhost:8888 name.dnydns-server.com
