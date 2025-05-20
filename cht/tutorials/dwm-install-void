@@ -138,15 +138,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 # VNC
 sudo xbps-install -S x11vnc
 x11vnc -passwd <passwd>
-# Autostartup
-sudo mkdir -p /etc/sv/x11vnc-server
-echo '#!/bin/sh
-sudo chpst -u rami:rami startx
-while true; do
-	sudo chpst -u rami:rami x11vnc -passwd <passwd>
-done' \
-| sudo tee /etc/sv/x11vnc-server/run
-sudo chmod +x /etc/sv/x11vnc-server/run
-sudo ln -s /etc/sv/x11vnc-server /var/service
 # On client
 ssh -N -L 5900:localhost:5900 user@xx.xx.xx.xx
+# Startup over ssh
+echo "\nallowed_users=anybody" | sudo tee /etc/X11/Xwrapper.config --append
