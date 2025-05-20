@@ -32,6 +32,8 @@ cd dwm; sudo make install clean
 cd st; sudo make install clean
 cd dmenu; sudo make install clean
 
+# Lightdm autostartup
+
 # Audio setup
 #sudo xbps-install -S pulseaudio
 sudo xbps-install -S alsa-firmware alsa-lib alsa-utils linux-firmware
@@ -135,7 +137,6 @@ curl -fsSL https://ollama.com/install.sh | sh
 # VNC
 sudo xbps-install -S x11vnc
 x11vnc -passwd <passwd>
-
 # Autostartup
 sudo mkdir -p /etc/sv/x11vnc-server
 echo '#!/bin/sh
@@ -146,6 +147,5 @@ done' \
 | sudo tee /etc/sv/x11vnc-server/run
 sudo chmod +x /etc/sv/x11vnc-server/run
 sudo ln -s /etc/sv/x11vnc-server /var/service
-
 # On client
 ssh -N -L 5900:localhost:5900 user@xx.xx.xx.xx
