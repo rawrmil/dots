@@ -33,6 +33,7 @@ cd st; sudo make install clean
 cd dmenu; sudo make install clean
 
 # Lightdm autostartup
+sudo ln -s /etc/sv/lightdm /var/service/
 
 # Audio setup
 #sudo xbps-install -S pulseaudio
