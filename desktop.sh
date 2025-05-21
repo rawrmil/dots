@@ -4,9 +4,9 @@
 set -e
 set -x
 
-echo "[desktop.sh] cd to ~/suckless..."
-mkdir -p $HOME/suckless
-cd $HOME/suckless
+#echo "[desktop.sh] cd to ~/suckless..."
+#mkdir -p $HOME/suckless
+#cd $HOME/suckless
 
 #echo "[desktop.sh] Clone the suckless..."
 #[ ! -d ./dwm ] && git clone https://git.suckless.org/dwm
