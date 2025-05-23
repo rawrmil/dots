@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Exit if shit hits the fan
 set -x
 
 echo $(dirname $(realpath $0))
@@ -8,12 +7,12 @@ echo $(dirname $(realpath $0))
 echo "[desktop.sh] Symlink the sxwm config..."
 mkdir -p ~/.config
 rm $HOME/.config/sxwmrc
-ln -s $(pwd)/dots/conf/sxwm/sxwmrc $HOME/.config/sxwmrc
+ln -s $(pwd)/dots/sxwm/sxwmrc $HOME/.config/sxwmrc
 
 echo "[desktop.sh] Symlink the picom config..."
 mkdir -p ~/.config/picom
 rm $HOME/.config/picom
-ln -s $(pwd)/dots/conf/sxwm/picom.conf $HOME/.config/picom/picom.conf
+ln -s $(pwd)/dots/sxwm/picom.conf $HOME/.config/picom/picom.conf
 
 echo "[desktop.sh] Symlink the .xinitrc & .Xresources..."
 rm $HOME/.xinitrc
