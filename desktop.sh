@@ -1,21 +1,22 @@
 #!/bin/bash
 
 # Exit if shit hits the fan
-set -e
 set -x
 
-cd $(realpath $0)
+echo $(dirname $(realpath $0))
 
 echo "[desktop.sh] Symlink the sxwm config..."
 mkdir -p ~/.config
-ln -s ./dots/conf/sxwm/sxwmrc $HOME/.config/sxwmrc
+rm $HOME/.config/sxwmrc
+ln -s $(pwd)/dots/conf/sxwm/sxwmrc $HOME/.config/sxwmrc
 
 echo "[desktop.sh] Symlink the picom config..."
-ln -s ./dots/conf/sxwm/picom.conf $HOME/.config/sxwmrc
+mkdir -p ~/.config/picom
+rm $HOME/.config/picom
+ln -s $(pwd)/dots/conf/sxwm/picom.conf $HOME/.config/picom/picom.conf
 
 echo "[desktop.sh] Symlink the .xinitrc & .Xresources..."
-ln -s ./sxwm/xinitrc $HOME/.xinitrc
-sudo echo 'Xft.dpi: 180
-Xft.antialias: true' | sudo tee $HOME/.Xresources
-
-
+rm $HOME/.xinitrc
+rm $HOME/.Xresources
+ln -s $(pwd)/sxwm/xinitrc $HOME/.xinitrc
+ln -s $(pwd)/sxwm/Xresources $HOME/.Xresources
