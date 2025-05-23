@@ -18,4 +18,4 @@ echo "[desktop.sh] Symlink the .xinitrc & .Xresources..."
 rm $HOME/.xinitrc
 rm $HOME/.Xresources
 ln -s $(pwd)/sxwm/xinitrc $HOME/.xinitrc
-ln -s $(pwd)/sxwm/Xresources $HOME/.Xresources
+cp $(pwd)/sxwm/Xresources $HOME/.Xresources
