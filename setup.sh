@@ -42,8 +42,8 @@ fi
 
 if hascmd "tmux"; then
 	echo "[LOG] tmux setup..."
-	#rm ~/.tmux.conf
-	#ln -s $DOTS_DIR/conf/tmux.conf ~/.tmux.conf
+	rm ~/.tmux.conf
+	ln -s $DOTS_DIR/conf/tmux.conf ~/.tmux.conf
 fi
 
 if hascmd "git"; then
