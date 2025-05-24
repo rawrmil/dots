@@ -116,7 +116,7 @@ echo "#\!/bin/bash
 exec chpst -u rami:rami rclone mount nextcloud: /mnt/nextcloud \
 	--vfs-cache-mode full \
 	--vfs-cache-max-size 20G \
-	--vfs-write-back 10s" \
+	--vfs-write-back 3s" \
 | sudo tee /etc/sv/rclonemnt/run
 
 sudo chmod +x /etc/sv/rclonemnt/run
