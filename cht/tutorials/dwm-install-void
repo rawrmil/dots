@@ -113,7 +113,10 @@ sudo chown $USER:$USER /mnt/nextcloud
 sudo mkdir /etc/sv/rclonemnt
 
 echo "#\!/bin/bash
-exec chpst -u $USER:$USER rclone mount nextcloud: /mnt/nextcloud --vfs-cache-mode writes" \
+exec chpst -u rami:rami rclone mount nextcloud: /mnt/nextcloud \
+	--vfs-cache-mode full \
+	--vfs-cache-max-size 20G \
+	--vfs-write-back 10s" \
 | sudo tee /etc/sv/rclonemnt/run
 
 sudo chmod +x /etc/sv/rclonemnt/run
