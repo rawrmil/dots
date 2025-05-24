@@ -18,7 +18,6 @@ if [ `echo $PREFIX | grep -o "com.termux"` ]; then
 	rm ~/.termux/colors.properties
 	ln -s $DOTS_DIR/conf/termux/termux.properties $HOME/.termux/termux.properties
 	ln -s $DOTS_DIR/conf/termux/colors.properties $HOME/.termux/colors.properties
-	pkg install termux-api
 fi
 
 # U T I L S
