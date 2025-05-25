@@ -65,7 +65,7 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-bindkey -s '^z' 'cd ..\n'
+bindkey -s '^z' 'cd $(fzf --walker=dir)\n'
 bindkey -s '^a' 'tmux\n'
 
 # Edit line in vim with ctrl-e:
