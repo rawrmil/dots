@@ -113,10 +113,10 @@ sudo chown $USER:$USER /mnt/nextcloud
 sudo mkdir /etc/sv/rclonemnt
 
 echo "#\!/bin/bash
-exec chpst -u rami:rami rclone mount nextcloud: /mnt/nextcloud \
-	--vfs-cache-mode full \
-	--vfs-cache-max-size 20G \
-	--vfs-write-back 3s" \
+exec chpst -u rami:rami rclone mount nextcloud: /mnt/nextcloud \\
+	--vfs-cache-mode full \\
+	--vfs-cache-max-size 20G \\
+	--vfs-write-back 10s" \
 | sudo tee /etc/sv/rclonemnt/run
 
 sudo chmod +x /etc/sv/rclonemnt/run
@@ -145,7 +145,3 @@ x11vnc -passwd <passwd>
 ssh -N -L 5900:localhost:5900 user@xx.xx.xx.xx
 # Startup over ssh
 echo "\nallowed_users=anybody" | sudo tee /etc/X11/Xwrapper.config --append
-
-# Sway
-ssudo xbps-install -S sway wayland wayland-utils xwayland
-udo xbps-install -S sway wayland xwayland
