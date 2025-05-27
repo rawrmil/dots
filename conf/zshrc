@@ -11,7 +11,7 @@ export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 
 # Dots synchronisation
 #{ ~/dots/scripts/rh-dots-sync.sh > ~/.dots_sync.log 2>&1 & } > /dev/null
-exec ~/dots/scripts/rh-dots-sync.sh > /dev/null 2>&1 &!
+exec ~/dots/scripts/rh-dots-sync.sh > ~/.dots_sync.log 2>&1 &!
 
 # Aliases
 alias ls="ls --color=auto"
