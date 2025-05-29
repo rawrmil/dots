@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo rmdir /storage/emulated/0/Cloud
 sudo nsenter -t 1 -m -- \
 sudo rclone mount nextcloud: /storage/emulated/0/Cloud \
 	--gid 9997 \
