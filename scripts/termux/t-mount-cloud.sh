@@ -13,7 +13,7 @@ sudo rclone mount nextcloud: /storage/emulated/0/Cloud \
 	--dir-cache-time 1000h \
     --vfs-cache-poll-interval 10s \
 	--buffer-size 16M \
-    --vfs-write-back 1s \
+    --vfs-write-back 10s \
     --no-checksum \
     --no-modtime
 
