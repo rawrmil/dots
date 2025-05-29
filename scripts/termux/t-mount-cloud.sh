@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo rmdir /storage/emulated/0/Cloud
 sudo nsenter -t 1 -m -- \
 sudo rclone mount nextcloud: /storage/emulated/0/Cloud \
 	--gid 9997 \
@@ -12,7 +11,7 @@ sudo rclone mount nextcloud: /storage/emulated/0/Cloud \
 	--allow-non-empty \
 	--vfs-fast-fingerprint \
 	--dir-cache-time 1000h \
-    --vfs-cache-poll-interval 10s
+    --vfs-cache-poll-interval 10s \
 	--buffer-size 16M \
     --vfs-write-back 1s \
     --no-checksum \
