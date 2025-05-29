@@ -17,5 +17,4 @@ sudo rclone mount nextcloud: /storage/emulated/0/Cloud \
 	--cache-chunk-size 8M \
 	--buffer-size 1G \
     --no-checksum \
-    --no-modtime \
-	--include "Cloud/**"
+    --no-modtime
