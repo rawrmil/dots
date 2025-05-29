@@ -11,6 +11,7 @@ sudo rclone mount nextcloud: /storage/emulated/0/Cloud \
 	--vfs-cache-max-size 10G \
 	--vfs-cache-max-age 48h \
 	--vfs-fast-fingerprint \
+	--vfs-write-back 20s \
 	--dir-cache-time 1000h \
 	--cache-chunk-size 8M \
 	--buffer-size 1G \
