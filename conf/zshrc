@@ -10,7 +10,8 @@ export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 #mkdir -p XDG_RUNTIME_DIR
 
 # Dots synchronisation
-#nohup bash ~/dots/scripts/rh-dots-sync.sh > ~/.dots_sync.log 2>&1 &
+#{ ~/dots/scripts/rh-dots-sync.sh > ~/.dots_sync.log 2>&1 & } > /dev/null
+exec ~/dots/scripts/rh-dots-sync.sh > ~/.dots_sync.log 2>&1 &!
 
 # Aliases
 alias ls="ls --color=auto"
@@ -66,7 +67,6 @@ echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 bindkey -s '^z' 'cd $(fzf --walker=dir)\n'
-bindkey -s '^a' 'tmux\n'
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line

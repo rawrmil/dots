@@ -145,3 +145,5 @@ x11vnc -passwd <passwd>
 ssh -N -L 5900:localhost:5900 user@xx.xx.xx.xx
 # Startup over ssh
 echo "\nallowed_users=anybody" | sudo tee /etc/X11/Xwrapper.config --append
+
+# QEMU
