@@ -1,6 +1,6 @@
 set relativenumber
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 " inoremap <C-j> <C-O>a{<CR><CR>}<C-O>k<Tab>
 
