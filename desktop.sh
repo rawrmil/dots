@@ -4,6 +4,11 @@ set -x
 
 echo $(dirname $(realpath $0))
 
+cd ~/dots
+
+echo "[desktop.sh] Symlink the config.h..."
+ln -s $(pwd)/dwm/dwm/config.h $HOME/suckless/dwm/config.h
+
 echo "[desktop.sh] Symlink the picom config..."
 mkdir -p ~/.config/picom
 rm $HOME/.config/picom/picom.conf
