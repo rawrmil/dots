@@ -146,4 +146,4 @@ ssh -N -L 5900:localhost:5900 user@xx.xx.xx.xx
 # Startup over ssh
 echo "\nallowed_users=anybody" | sudo tee /etc/X11/Xwrapper.config --append
 
-# QEMU
+# Ctrl+Alt+F<n> - go to tty number n from 1 to 6
