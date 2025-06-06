@@ -17,3 +17,16 @@ rclone mount nextcloud: /mnt/nextcloud \
 	--buffer-size 1G \
 	--no-checksum \
 	--no-modtime
+
+sudo nsenter -t 1 -m -- \
+sshfs rami@0.0.0.0:/home/rami/Cloud /storage/emulated/0 \
+    -o uid=$(id -u),gid=9997 \
+    -o umask=0007 \
+#
+    -o cache_timeout=1001 \
+    -o cache_stat_timeout=20 \
+    -o cache_dir_timeout=20 \
+    -o cache=yes \
+    -o writeback_cache \
+    -o max_readahead=1048576 \
+    -o idmap=user
