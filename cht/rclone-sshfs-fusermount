@@ -1,6 +1,6 @@
 #!/bin/bash
-#sudo nsenter -t 1 -m -- \
-exec chpst -u rami:rami \
+#exec chpst -u rami:rami \
+sudo nsenter -t 1 -m -- \
 rclone mount nextcloud: /mnt/nextcloud \
 	--gid 9997 \
 	--dir-perms 0771 \
@@ -18,8 +18,7 @@ rclone mount nextcloud: /mnt/nextcloud \
 	--no-checksum \
 	--no-modtime
 
-sudo nsenter -t 1 -m -- \
-sshfs rami@0.0.0.0:/home/rami/Cloud /storage/emulated/0 \
+sudo nsenter -t 1 -m -- sshfs rami@0.0.0.0:/home/rami/Cloud /storage/emulated/0/Cloud
     -o uid=$(id -u),gid=9997 \
     -o umask=0007 \
 #
