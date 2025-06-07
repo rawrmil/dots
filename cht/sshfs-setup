@@ -9,7 +9,10 @@ ssh_user=
 ssh_ip=
 ssh_port=
 USER=rami
-sshfs -d -o uid=$(id -u $USER),gid=$(id -g $USER) \
+sudo mkdir -p /mnt/cloud
+sudo chown $USER:$USER /mnt/cloud
+exec chpst -u $USER:$USER \
+	sshfs -d -o uid=$(id -u $USER),gid=$(id -g $USER) \
 	-p $ssh_port $ssh_user@$ssh_ip:/home/$ssh_user/Cloud /mnt/cloud
 ```
 # A N D R O I D
