@@ -1,2 +1,10 @@
 ssh-copy-id user@1.2.3.4
-
+# P C
+mkdir -p /mnt/cloud
+sshfs -d -o uid=$(id -u),gid=$(id -g) \
+	-p 22 user@1.2.3.4:/home/rami/Cloud /mnt/cloud
+# A N D R O I D
+mkdir -p ~/storage/shared/Cloud
+sudo nsenter -t 1 -m -- \
+	sshfs -d -o allow_other,uid=$(id -u),gid=$(id -g) \
+	-p 22 rami@1.2.3.4:/home/rami/Cloud /storage/emulated/0/Cloud
