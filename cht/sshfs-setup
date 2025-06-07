@@ -1,8 +1,15 @@
 ssh-copy-id user@1.2.3.4
 # P C
-mkdir -p /mnt/cloud
-sshfs -d -o uid=$(id -u),gid=$(id -g) \
+mkdir /mnt/cloud
+mkdir /etc/sv/sshfs_cloud
+nvim /etc/sv/sshfs_cloud/run
+```
+#!/bin/bash
+USER=rami
+exec chpst -u $USER:$USER \
+	sshfs -d -o uid=$(id -u $USER),gid=$(id -g $USER) \
 	-p 22 user@1.2.3.4:/home/rami/Cloud /mnt/cloud
+```
 # A N D R O I D
 mkdir -p ~/storage/shared/Cloud
 sudo nsenter -t 1 -m -- \
