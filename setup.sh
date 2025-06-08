@@ -41,7 +41,6 @@ fi
 
 if hascmd "tmux"; then
 	echo "[LOG] tmux setup..."
-	rm ~/.tmux.conf
 	ln -s $DOTS_DIR/conf/tmux.conf ~/.tmux.conf
 fi
 
@@ -53,7 +52,6 @@ fi
 
 if hascmd "zsh"; then
 	echo "[LOG] zsh setup..."
-	rm ~/.zshrc
 	ln -s $DOTS_DIR/conf/zshrc $HOME/.zshrc
 	chsh -s $zsh_chsh_path
 fi
