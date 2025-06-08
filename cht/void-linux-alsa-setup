@@ -1,0 +1,4 @@
+~/.asound.conf
+defaults.pcm.card 1
+defaults.pcm.device 0
+defaults.ctl.card 1
