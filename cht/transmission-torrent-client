@@ -1,0 +1,6 @@
+mkdir -p ~/Torrent
+transmission-daemon --download-dir ~/Torrent
+transmission-remote -a <file>
+transmission-remote -pi
+
+~/.config/transmission-daemon/settings.json
