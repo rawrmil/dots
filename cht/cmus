@@ -1,2 +1,2 @@
-sudo xbps-install -S libflac
+sudo xbps-install -S cmus cmus-flac cmus-opus
 
