@@ -3,4 +3,15 @@ transmission-daemon --download-dir ~/Torrent
 transmission-remote -a <file>
 transmission-remote -l
 
+# Void
 ~/.config/transmission-daemon/settings.json
+
+# SYSTEMD
+sudo systecmtl stop transmission-daemon
+/etc/transmission-daemon/settings.json
+```
+...
+"rpc-authentication-required": false,
+...
+```
+sudo systecmtl start transmission-daemon
