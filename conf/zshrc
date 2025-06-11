@@ -5,12 +5,8 @@ export PATH="$HOME/dots/scripts/desktop:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
-# For DWL
-export XDG_RUNTIME_DIR="/run/user/$(id -u)"
-#mkdir -p XDG_RUNTIME_DIR
 
 # Dots synchronisation
-#{ ~/dots/scripts/rh-dots-sync.sh > ~/.dots_sync.log 2>&1 & } > /dev/null
 exec ~/dots/scripts/rh-dots-sync.sh > ~/.dots_sync.log 2>&1 &!
 
 # Aliases
@@ -19,7 +15,6 @@ alias ch="cd ~/dots/cht"
 alias g="git"
 alias gac="git commit"
 
-# Enable colors and change prompt:
 autoload -U colors && colors
 #PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 PS1="$ "
@@ -45,7 +40,7 @@ bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -v '^?' backward-delete-char
+#bindkey -v '^?' backward-delete-char
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
@@ -60,19 +55,20 @@ function zle-keymap-select {
 	fi
 }
 zle -N zle-keymap-select
+zle -N zle-line-init
+autoload edit-command-line; zle -N edit-command-line
+
 zle-line-init() {
 	zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
 	echo -ne "\e[5 q"
 }
-zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 bindkey -s '^z' 'cd $(fzf --walker=dir)\n'
 
 # Edit line in vim with ctrl-e:
-autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-# Load zsh-syntax-highlighting; should be last.
+# Load zsh-syntax-highlighting; run last
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
