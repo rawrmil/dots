@@ -10,13 +10,8 @@ ssh_ip=
 ssh_port=
 USER=rami
 sudo mkdir -p /mnt/cloud
-sudo chown $USER:$USER /mnt/cloud
+sudo chown $USER:root /mnt/cloud
 exec chpst -u $USER:$USER \
-	sshfs -d -o uid=$(id -u $USER),gid=$(id -g $USER) \
+	sshfs -d -o uid=$(id -u $USER),gid=$(id -g $USER),allow_other \
 	-p $ssh_port $ssh_user@$ssh_ip:/home/$ssh_user/Cloud /mnt/cloud
 ```
-# A N D R O I D
-mkdir -p ~/storage/shared/Cloud
-sudo nsenter -t 1 -m -- \
-	sshfs -d -o allow_other,uid=$(id -u),gid=$(id -g) \
-	-p 22 rami@1.2.3.4:/home/rami/Cloud /storage/emulated/0/Cloud
