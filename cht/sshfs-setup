@@ -3,6 +3,7 @@ ssh-copy-id user@1.2.3.4
 mkdir /mnt/cloud
 mkdir /etc/sv/sshfs_cloud
 nvim /etc/sv/sshfs_cloud/run
+sudo sed -i 's/#user_allow_other/user_allow_other/' /etc/fuse.conf
 ```
 #!/bin/bash
 ssh_user=
@@ -10,8 +11,8 @@ ssh_ip=
 ssh_port=
 USER=rami
 sudo mkdir -p /mnt/cloud
-sudo chown $USER:root /mnt/cloud
-exec chpst -u $USER:$USER \
+sudo chown "$USER":"$USER" /mnt/cloud
+exec chpst -u "$USER":"$USER" \
 	sshfs -d -o uid=$(id -u $USER),gid=$(id -g $USER),allow_other \
 	-p $ssh_port $ssh_user@$ssh_ip:/home/$ssh_user/Cloud /mnt/cloud
 ```
