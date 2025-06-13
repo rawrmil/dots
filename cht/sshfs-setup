@@ -9,10 +9,10 @@ sudo sed -i 's/#user_allow_other/user_allow_other/' /etc/fuse.conf
 ssh_user=
 ssh_ip=
 ssh_port=
-USER=rami
+user=rami
 sudo mkdir -p /mnt/cloud
-sudo chown "$USER":"$USER" /mnt/cloud
-exec chpst -u "$USER":"$USER" \
-	sshfs -d -o uid=$(id -u $USER),gid=$(id -g $USER),allow_other \
+sudo chown "$user":"$user" /mnt/cloud
+exec chpst -u "$user":"$user" \
+	sshfs -d -o uid=$(id -u $user),gid=$(id -g $user),allow_other \
 	-p $ssh_port $ssh_user@$ssh_ip:/home/$ssh_user/Cloud /mnt/cloud
 ```
