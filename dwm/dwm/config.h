@@ -7,15 +7,10 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Fira Code:monospace:size=10" };
 static const char dmenufont[]       = "Fira Code:monospace:size=10";
-static const char col_gray1[]       = "#200220";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#ffc0cb";
-static const char col_gray4[]       = "#200220";
-static const char col_leader[]        = "#ffc0cb";
 static const char *colors[][3]      = {
 	/*               fg         bg          border   */
-	[SchemeNorm] = { col_gray3, col_gray1,  col_gray2 },
-	[SchemeSel]  = { col_gray4, col_leader, col_leader },
+	[SchemeNorm] = { "#ffffff", "#000000", "#00ff00" },
+	[SchemeSel]  = { "#000000", "#ffffff", "#ff0000" },
 };
 
 /* tagging */
@@ -57,7 +52,13 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_leader, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run",
+	"-m", dmenumon,
+	"-fn", dmenufont,
+	"-nb", "#ffffff",
+	"-nf", "#000000",
+	"-sb", "#ff00000",
+	"-sf", "#ff00000", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *scrshotcmd[]  = { "flameshot", "gui", NULL };
 
