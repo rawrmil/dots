@@ -55,10 +55,10 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run",
 	"-m",  dmenumon,
 	"-fn", dmenufont,
-	"-nb", "#ffffff",
-	"-nf", "#000000",
-	"-sb", "#000000",
-	"-sf", "#ffffff",
+	"-nb", "#000000",
+	"-nf", "#ffffff",
+	"-sb", "#ffffff",
+	"-sf", "#000000",
 	NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *scrshotcmd[]  = { "flameshot", "gui", NULL };
