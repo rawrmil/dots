@@ -1,0 +1,4 @@
+sudo apt install build-essential
+# DWM
+sudo apt install libx11-dev libxft-dev libxinerama-dev
+sudo apt install alsa-utils pulseaudio
