@@ -9,8 +9,8 @@ static const char *fonts[]          = { "Fira Code:monospace:size=10" };
 static const char dmenufont[]       = "Fira Code:monospace:size=10";
 static const char *colors[][3]      = {
 	/*               fg         bg          border   */
-	[SchemeNorm] = { "#ffffff", "#000000", "#00ff00" },
-	[SchemeSel]  = { "#000000", "#ffffff", "#ff0000" },
+	[SchemeNorm] = { "#ffffff", "#000000", "#000000" },
+	[SchemeSel]  = { "#000000", "#ffffff", "#00ffff" },
 };
 
 /* tagging */
@@ -53,12 +53,13 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run",
-	"-m", dmenumon,
+	"-m",  dmenumon,
 	"-fn", dmenufont,
 	"-nb", "#ffffff",
 	"-nf", "#000000",
-	"-sb", "#ff00000",
-	"-sf", "#ff00000", NULL };
+	"-sb", "#000000",
+	"-sf", "#ffffff",
+	NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *scrshotcmd[]  = { "flameshot", "gui", NULL };
 
