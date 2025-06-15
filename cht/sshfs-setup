@@ -10,7 +10,7 @@ user=
 mkdir -p $HOME/Cloud
 sshfs -d -o uid=$(id -u $user),gid=$(id -g $user),allow_other \
 	-p $ssh_port $ssh_user@$ssh_ip:$ssh_dir $HOME/Cloud
-fusermount -u /home/rami/Cloud
+fusermount -u $HOME/Cloud
 ```
 
 OLD
