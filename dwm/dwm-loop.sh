@@ -2,8 +2,8 @@
 set -x
 [ -z "$DISPLAY" ] && export DISPLAY=:0
 [ -z "$XDG_RUNTIME_DIR" ] && export XDG_RUNTIME_DIR=/tmp
-xsetroot -solid #000000
 while true; do
+	hsetroot -solid black
 	xrdb -merge ~/.Xresources
 	setxkbmap -layout us,ru -option grp:alt_shift_toggle
 	picom -b --config ~/dots/dwm/picom.conf
