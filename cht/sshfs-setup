@@ -1,9 +1,18 @@
 ssh-copy-id user@1.2.3.4
 # P C
-mkdir /mnt/cloud
-mkdir /etc/sv/sshfs_cloud
-nvim /etc/sv/sshfs_cloud/run
-sudo sed -i 's/#user_allow_other/user_allow_other/' /etc/fuse.conf
+```
+#!/bin/bash
+ssh_user=
+ssh_ip=
+ssh_port=
+ssh_dir=/home/$ssh_user/Cloud
+user=
+mkdir -p $HOME/Cloud
+sshfs -d -o uid=$(id -u $user),gid=$(id -g $user),allow_other \
+	-p $ssh_port $ssh_user@$ssh_ip:$ssh_dir $HOME/Cloud
+```
+
+OLD
 ```
 #!/bin/bash
 ssh_user=
