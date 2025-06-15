@@ -1,4 +1,5 @@
 # Rami's take on Luke's config for ZSH
+export PATH="/sbin:$PATH"
 export PATH="$HOME/dots/scripts/termux:$PATH"
 export PATH="$HOME/dots/scripts/git:$PATH"
 export PATH="$HOME/dots/scripts/desktop:$PATH"
