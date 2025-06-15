@@ -3,6 +3,7 @@ sudo apt install build-essential
 sudo apt install libx11-dev libxft-dev libxinerama-dev
 # Audio
 sudo apt install alsa-utils pulseaudio
+sudo apt install pipewire
 # Fonts
 sudo apt install fonts-firacode fonts-noto-color-emoji
 # Asian
