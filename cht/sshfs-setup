@@ -1,5 +1,6 @@
 ssh-copy-id user@1.2.3.4
 sudo sed -i 's/#user_allow_other/user_allow_other/' /etc/fuse.conf
+mkdir -p ~/Cloud
 # P C
 ```
 #!/bin/bash
