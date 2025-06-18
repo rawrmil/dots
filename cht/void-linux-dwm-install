@@ -4,7 +4,7 @@ sudo xbps-install -Suy
 # Main shi
 sudo xbps-install -S git gcc clang make xorg-minimal pkg-config
 # Desktop shi
-sudo xbps-install -S xdg-user-dirs xdg-utils
+sudo xbps-install -S xdg-user-dirs xdg-utils elogind
 # For building the 
 sudo xbps-install -S libX11-devel libXft-devel libXinerama-devel freetype-deve 
 # For display/keyboard settings
