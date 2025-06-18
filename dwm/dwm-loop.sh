@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
-[ -z "$DISPLAY" ] && export DISPLAY=:0
-[ -z "$XDG_RUNTIME_DIR" ] && export XDG_RUNTIME_DIR=/tmp
+#[ -z "$DISPLAY" ] && export DISPLAY=:0
+#[ -z "$XDG_RUNTIME_DIR" ] && export XDG_RUNTIME_DIR=/tmp
 while true; do
 	flameshot &
 	hsetroot -solid black
