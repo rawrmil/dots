@@ -10,4 +10,5 @@ echo $ssh_user $ssh_ip $ssh_port $src_dir $dst_dir
 mkdir -p $dst_dir
 sshfs -p $ssh_port $ssh_user@$ssh_ip:$src_dir $dst_dir \
 	-d -o uid=$(id -u $USER),gid=$(id -g $USER),allow_other \
-	-o "UserKnownHostsFile=/dev/null"
+	-o "UserKnownHostsFile=/dev/null" \
+	-o StrictHostKeyChecking=no
