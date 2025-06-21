@@ -3,6 +3,7 @@ export PATH="/sbin:$PATH"
 export PATH="$HOME/dots/scripts/termux:$PATH"
 export PATH="$HOME/dots/scripts/git:$PATH"
 export PATH="$HOME/dots/scripts/desktop:$PATH"
+export PATH="$HOME/dots/scripts/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
