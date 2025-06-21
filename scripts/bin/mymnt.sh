@@ -1,5 +1,5 @@
 #!/bin/bash
-# automnt.sh root@192.168.0.122//storage/emulated/0 ~/poco
+# automnt.sh root@192.168.0.122:8022//storage/emulated/0 ~/poco
 
 IFS=@/: read -r ssh_user ssh_ip ssh_port src_dir <<EOF
 ${string:-$1}
