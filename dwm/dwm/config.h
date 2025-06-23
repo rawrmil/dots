@@ -14,7 +14,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4", "q", "w", "e", "r", "a" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -35,9 +35,9 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "TIL",      tile },    /* first entry is default */
+	{ "FLO",      NULL },    /* no layout function means floating behavior */
+	{ "MON",      monocle },
 };
 
 /* key definitions */
@@ -93,12 +93,12 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
-	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	TAGKEYS(                        XK_q,                      4)
+	TAGKEYS(                        XK_w,                      5)
+	TAGKEYS(                        XK_e,                      6)
+	TAGKEYS(                        XK_r,                      7)
+	TAGKEYS(                        XK_a,                      8)
+	{ MODKEY|ShiftMask,             XK_m,      quit,           {0} },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = scrshotcmd } },
 };
 
