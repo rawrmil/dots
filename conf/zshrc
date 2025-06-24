@@ -26,6 +26,8 @@ PS1="$ "
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
+setopt appendhistory
+setopt sharehistory
 
 # Basic auto/tab complete:
 autoload -U compinit
