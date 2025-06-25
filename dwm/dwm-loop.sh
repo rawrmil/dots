@@ -8,6 +8,8 @@ while true; do
 	xrdb -merge ~/.Xresources
 	setxkbmap -layout us,ru -option grp:alt_shift_toggle
 	picom -b --config ~/dots/dwm/picom.conf
+	pkill dwm-bar.sh
 	~/dots/dwm/dwm-bar.sh &
 	dwm
+	sleep 1
 done
