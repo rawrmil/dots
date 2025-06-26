@@ -11,7 +11,7 @@ trap cleanup INT TERM EXIT
 while true; do
 	flameshot &
 	hsetroot -solid black
-	xrdb -merge ~/.Xresources
+	xrdb -merge $HOME/.Xresources
 	setxkbmap -layout us,ru -option grp:alt_shift_toggle
 	picom -b --config ~/dots/dwm/picom.conf
 	pkill dwm-bar.sh
