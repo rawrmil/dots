@@ -12,4 +12,5 @@ while true; do
 	~/dots/dwm/dwm-bar.sh &
 	dwm
 	sleep 1
+	exit 0
 done
