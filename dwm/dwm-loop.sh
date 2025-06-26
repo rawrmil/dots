@@ -1,7 +1,13 @@
-#!/bin/bash
+#!/bin/sh
 set -x
 [ -z "$DISPLAY" ] && export DISPLAY=:0
 #[ -z "$XDG_RUNTIME_DIR" ] && export XDG_RUNTIME_DIR=/tmp
+cleanup() {
+    pkill -P $$ # Kill children
+    wait
+    exit 0
+}
+trap cleanup INT TERM EXIT
 while true; do
 	flameshot &
 	hsetroot -solid black
@@ -12,5 +18,4 @@ while true; do
 	~/dots/dwm/dwm-bar.sh &
 	dwm
 	sleep 1
-	exit 0
 done
