@@ -10,7 +10,6 @@ cleanup() {
 trap cleanup INT TERM EXIT
 while true; do
 	hsetroot -solid black
-	xrdb -merge $HOME/.Xresources
 	setxkbmap -layout us,ru -option grp:alt_shift_toggle
 	picom -b --config ~/dots/dwm/picom.conf
 	# Child processes
@@ -18,6 +17,7 @@ while true; do
 	pkill dwm-bar.sh
 	~/dots/dwm/dwm-bar.sh &
 	# Start dwm
+	xrdb -merge $HOME/.Xresources
 	dwm
 	sleep 1
 done
