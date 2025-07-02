@@ -1,6 +1,10 @@
 set relativenumber
 set shiftwidth=2
 set tabstop=2
+nnoremap <C-Up> <C-y>
+nnoremap <C-Down> <C-e>
+nnoremap <C-k> <C-y>
+nnoremap <C-j> <C-e>
 
 " inoremap <C-j> <C-O>a{<CR><CR>}<C-O>k<Tab>
 
