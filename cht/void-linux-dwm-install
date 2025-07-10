@@ -3,6 +3,8 @@
 sudo xbps-install -Suy
 # Main shi
 sudo xbps-install -S git gcc clang make xorg-minimal pkg-config
+or
+sudo xbps-install -S base-devel
 # Desktop shi
 sudo xbps-install -S xdg-user-dirs xdg-utils elogind
 # For building the 
